@@ -1,0 +1,8 @@
+{"item_id": "code-001", "model": "model-a", "scores": {"correctness": 5, "edge_cases": 5, "efficiency": 4, "readability": 5}, "failure_tags": [], "rationale": "Correct; handles duplicates and short lists."}
+{"item_id": "code-001", "model": "model-b", "scores": {"correctness": 3, "edge_cases": 1, "efficiency": 4, "readability": 4}, "failure_tags": ["missed_edge_case"], "rationale": "Returns the max again when all values are equal."}
+{"item_id": "code-002", "model": "model-a", "scores": {"correctness": 4, "edge_cases": 3, "efficiency": 5, "readability": 4}, "failure_tags": ["missed_edge_case"], "rationale": "Fails on an empty input list."}
+{"item_id": "code-002", "model": "model-b", "scores": {"correctness": 2, "edge_cases": 2, "efficiency": 2, "readability": 3}, "failure_tags": ["code_error", "inefficient_solution"], "rationale": "Forgets to sort first; O(n^2) comparison loop."}
+{"item_id": "reason-001", "model": "model-a", "scores": {"final_answer": 5, "reasoning": 5, "clarity": 4}, "failure_tags": [], "rationale": "Correct with clear steps."}
+{"item_id": "reason-001", "model": "model-b", "scores": {"final_answer": 1, "reasoning": 2, "clarity": 4}, "failure_tags": ["incorrect_answer", "flawed_reasoning"], "rationale": "Adds the delay to the departure time only and answers 3:05 pm."}
+{"item_id": "instr-001", "model": "model-a", "scores": {"constraints_met": 2, "helpfulness": 5}, "failure_tags": ["ignored_constraint"], "rationale": "Good content but four bullets."}
+{"item_id": "instr-001", "model": "model-b", "scores": {"constraints_met": 5, "helpfulness": 4}, "failure_tags": [], "rationale": "Exactly three short bullets."}

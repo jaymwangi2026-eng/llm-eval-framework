@@ -1,0 +1,59 @@
+{
+  "name": "Sample benchmark",
+  "rubrics": [
+    {
+      "id": "coding-v1",
+      "criteria": [
+        {"name": "correctness", "description": "Produces the right output for all valid inputs.", "weight": 0.5},
+        {"name": "edge_cases", "description": "Handles empty, boundary and invalid inputs.", "weight": 0.2},
+        {"name": "efficiency", "description": "Uses a reasonable time and space complexity.", "weight": 0.15},
+        {"name": "readability", "description": "Clear names, structure and comments.", "weight": 0.15}
+      ]
+    },
+    {
+      "id": "reasoning-v1",
+      "criteria": [
+        {"name": "final_answer", "description": "The final answer is correct.", "weight": 0.5},
+        {"name": "reasoning", "description": "Each step follows from the previous one.", "weight": 0.35},
+        {"name": "clarity", "description": "The explanation is easy to follow.", "weight": 0.15}
+      ]
+    },
+    {
+      "id": "instructions-v1",
+      "criteria": [
+        {"name": "constraints_met", "description": "Follows every explicit constraint in the prompt.", "weight": 0.6},
+        {"name": "helpfulness", "description": "Actually accomplishes the user's goal.", "weight": 0.4}
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "code-001",
+      "category": "coding",
+      "prompt": "Write a Python function that returns the second-largest distinct value in a list of integers, or None if there isn't one.",
+      "reference_solution": "def second_largest(nums):\n    distinct = sorted(set(nums), reverse=True)\n    return distinct[1] if len(distinct) > 1 else None",
+      "rubric_id": "coding-v1"
+    },
+    {
+      "id": "code-002",
+      "category": "coding",
+      "prompt": "Write a function that merges overlapping intervals given as a list of [start, end] pairs.",
+      "reference_solution": "Sort by start; extend the last merged interval when the next start <= its end, otherwise append.",
+      "rubric_id": "coding-v1"
+    },
+    {
+      "id": "reason-001",
+      "category": "reasoning",
+      "prompt": "A train leaves at 2:40 pm and the trip takes 2 hours 35 minutes. It is delayed 25 minutes. When does it arrive?",
+      "reference_solution": "5:40 pm (2:40 + 2:35 = 5:15, plus 25 minutes).",
+      "rubric_id": "reasoning-v1"
+    },
+    {
+      "id": "instr-001",
+      "category": "instruction_following",
+      "prompt": "Summarize the benefits of unit testing in exactly three bullet points, each under 12 words.",
+      "reference_solution": "Three bullets, each under 12 words, covering e.g. catching regressions, safer refactoring, documenting behavior.",
+      "rubric_id": "instructions-v1"
+    }
+  ]
+}
